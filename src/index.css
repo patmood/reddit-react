@@ -3,3 +3,23 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+/* WHITESPACE */
+.m0 { margin: 0; }
+.m1 { margin: 1em; }
+.m2 { margin: 2em; }
+.m3 { margin: 3em; }
+
+.p0 { margin: 0; }
+.p1 { margin: 1em; }
+.p2 { margin: 2em; }
+.p3 { margin: 3em; }
+
+/* TYPOGRAPHY */
+.muted { opacity: 0.3; }
+
+/* FLEX */
+.flex { display: flex; }
+
+/* HELPERS */
+.list-reset { list-style: none; }

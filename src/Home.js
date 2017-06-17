@@ -1,6 +1,8 @@
 import React from 'react'
 import _get from 'lodash/get'
 
+import Sidebar from './Sidebar'
+
 class Home extends React.Component {
   constructor(props) {
     super(props)
@@ -18,7 +20,10 @@ class Home extends React.Component {
     console.log(this.state)
     const posts = _get(this.state, 'reddit.data.children')
     return (
-      <h1>home</h1>
+      <section className="flex">
+        <h1>home</h1>
+        <Sidebar posts={posts} />
+      </section>
     )
   }
 }

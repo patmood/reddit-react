@@ -6,9 +6,20 @@ import {
 } from 'react-router-dom'
 import Home from './Home'
 import Subreddit from './Subreddit'
-import './App.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {}
+    this.fetchSubreddit = this.fetchSubreddit.bind(this)
+  }
+
+  fetchSubreddit() {
+    fetch(`https://www.reddit.com/.json`)
+      .then(res => res.json())
+      .then(reddit => this.setState({ reddit }))
+  }
+
   render() {
     return (
       <Router>
