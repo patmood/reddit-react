@@ -6,18 +6,22 @@ import Sidebar from './Sidebar'
 class Home extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {
-    }
+    this.fetchSubreddit = this.fetchSubreddit.bind(this)
+    this.state = {}
   }
 
-  componentDidMount() {
-    fetch(`https://www.reddit.com/.json`)
+  fetchSubreddit(sub) {
+    const path = sub ? `/r/${sub}.json` : '/.json'
+    fetch(`https://www.reddit.com${path}`)
       .then(res => res.json())
       .then(reddit => this.setState({ reddit }))
   }
 
+  componentDidMount() {
+    this.fetchSubreddit()
+  }
+
   render() {
-    console.log(this.state)
     const posts = _get(this.state, 'reddit.data.children')
     return (
       <section className="flex">
