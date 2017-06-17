@@ -1,7 +1,7 @@
 import React from 'react'
 import _get from 'lodash/get'
 
-import Sidebar from './Sidebar'
+import Layout from './Layout'
 
 class Subreddit extends React.Component {
   constructor(props) {
@@ -24,10 +24,9 @@ class Subreddit extends React.Component {
   render() {
     const posts = _get(this.state, 'reddit.data.children')
     return (
-      <section className="flex">
+      <Layout posts={posts}>
         <h1>Subreddit - {this.props.match.params.subreddit}</h1>
-        <Sidebar posts={posts} />
-      </section>
+      </Layout>
     )
   }
 }
