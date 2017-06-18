@@ -1,7 +1,9 @@
 import React from 'react'
 import _get from 'lodash/get'
+import { Route } from 'react-router-dom'
 
 import Layout from './Layout'
+import Comments from './Comments'
 
 class Subreddit extends React.Component {
   constructor(props) {
@@ -26,6 +28,7 @@ class Subreddit extends React.Component {
     return (
       <Layout posts={posts}>
         <h1>Subreddit - {this.props.match.params.subreddit}</h1>
+        <Route path={`${this.props.match.url}/comments/:id`} component={Comments} />
       </Layout>
     )
   }

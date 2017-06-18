@@ -11,8 +11,8 @@ class App extends Component {
     return (
       <Router>
         <main>
-          <Route exact path="/" component={Home} test="test"/>
-          <Route path="/r/:subreddit" component={Subreddit}/>
+          <Route exact path="/" component={Home}/>
+          <Route path="/r/:subreddit" component={Subreddit} />>
         </main>
       </Router>      
     )
