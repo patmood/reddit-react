@@ -17,6 +17,7 @@ body {
 
 .mb0 { margin-bottom: 0; }
 .mb1 { margin-bottom: 0.5rem; }
+.mb2 { margin-bottom: 1rem; }
 
 .p0 { padding: 0; }
 .p1 { padding: 0.5rem; }
@@ -50,3 +51,7 @@ body {
 .pointer { cursor: pointer; }
 .text-decoration-none { text-decoration: none; }
 .color-inherit { color: inherit; }
+
+/* APP SPECIFIC */
+.parent-comment { border-bottom: 1px solid rgba(0,0,0,.05) }
+.child-comment { border-left: 14px solid rgba(0,0,0,.05); margin-left: 1px; }

@@ -19,7 +19,7 @@ class Content extends React.Component {
 
   render() {
     return (
-      <article>
+      <article className="p0">
         <Route path={`${this.props.match.url}/comments/:id`} component={Comments} />
       </article>
     )
