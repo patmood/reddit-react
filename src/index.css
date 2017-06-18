@@ -47,3 +47,6 @@ body {
 .list-reset { list-style: none; }
 .icon { width: 24px; height: 24px; }
 .hover:hover { background-color: rgba(0, 0, 0, 0.1); transition: background-color 500ms; }
+.pointer { cursor: pointer; }
+.text-decoration-none { text-decoration: none; }
+.color-inherit { color: inherit; }

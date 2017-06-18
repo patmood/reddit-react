@@ -1,10 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import _get from 'lodash/get'
-import ago from 's-ago'
 
-import { Comment } from './icons/Comment'
 import { Home } from './icons/Home'
+import PostItem from './PostItem'
 
 class Sidebar extends React.Component {
   constructor(props) {
@@ -29,7 +28,7 @@ class Sidebar extends React.Component {
       this.setState({ reddit: [] })
       this.fetchSubreddit(nextProps.subreddit)
     }
-  }    
+  }  
 
   render() {
     const posts = _get(this.state, 'reddit.data.children')
@@ -41,26 +40,7 @@ class Sidebar extends React.Component {
           </Link>
         </div>
         <ul className="list-reset p0 m0">
-          {posts && posts.map(post => <li key={post.data.id} className="p1 flex border-bottom border-gray hover">
-            <div className="flex-auto">
-              <div>{post.data.title}</div>
-              <div className="muted">{post.data.domain.toLowerCase()}</div>
-              <div>
-                <span>
-                  {`${ago(new Date(post.data.created * 1000))} in `}
-                </span>
-                <Link to={`/r/${post.data.subreddit}`}>
-                  {post.data.subreddit}
-                </Link>
-              </div>
-            </div>
-            <Link to={`/r/${post.data.subreddit}/comments/${post.data.id}`}>
-              <div>
-                <Comment className='icon gray' />
-                <div>{post.data.num_comments}</div>
-              </div>
-            </Link>
-          </li>)}
+          {posts && posts.map(post => <PostItem key={post.data.id} post={post} />)}
         </ul>
       </aside>
     )
