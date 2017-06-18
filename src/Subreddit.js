@@ -23,6 +23,11 @@ class Subreddit extends React.Component {
     this.fetchSubreddit(this.props.match.params.subreddit)
   }
 
+  componentWillReceiveProps(nextProps) {
+    this.setState({ reddit: [] })
+    this.fetchSubreddit(nextProps.match.params.subreddit)
+  }  
+
   render() {
     const posts = _get(this.state, 'reddit.data.children')
     return (
