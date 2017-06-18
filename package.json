@@ -6,7 +6,8 @@
     "lodash": "^4.17.4",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "react-router-dom": "^4.1.1"
+    "react-router-dom": "^4.1.1",
+    "s-ago": "^1.1.0"
   },
   "devDependencies": {
     "react-scripts": "1.0.7"

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import _get from 'lodash/get'
+import ago from 's-ago'
 
 import { Comment } from './icons/Comment'
 import { Home } from './icons/Home'
@@ -44,9 +45,14 @@ class Sidebar extends React.Component {
             <div className="flex-auto">
               <div>{post.data.title}</div>
               <div className="muted">{post.data.domain.toLowerCase()}</div>
-              <Link to={`/r/${post.data.subreddit}`}>
-                {post.data.subreddit}
-              </Link>
+              <div>
+                <span>
+                  {`${ago(new Date(post.data.created * 1000))} in `}
+                </span>
+                <Link to={`/r/${post.data.subreddit}`}>
+                  {post.data.subreddit}
+                </Link>
+              </div>
             </div>
             <Link to={`/r/${post.data.subreddit}/comments/${post.data.id}`}>
               <div>

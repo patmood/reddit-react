@@ -1,4 +1,6 @@
 import React from 'react'
+import _get from 'lodash/get'
+import ago from 's-ago'
 
 class Comments extends React.Component {
   constructor(props) {
@@ -26,10 +28,16 @@ class Comments extends React.Component {
 
   render() {
     const [selfPost, comments] = this.state.comments
+    if (!selfPost || !comments) return null
+    const postInfo = _get(selfPost, 'data.children.0.data')
     return (
       <div>
-        <h1>Comments - {this.props.match.params.id}</h1>
-        {comments && comments.data.children.map(comment => <div key={comment.data.id} className="mb1">
+        <h1>{postInfo.title}</h1>
+        <div className="flex">
+          <div className="mr1">{postInfo.ups}</div>
+          <div>{ago(new Date(postInfo.created * 1000))}</div>
+        </div> 
+        {comments.data.children.map(comment => <div key={comment.data.id} className="mb1">
           {comment.data.body}
         </div>)}
       </div>

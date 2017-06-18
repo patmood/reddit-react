@@ -15,7 +15,6 @@ class Layout extends React.Component {
   }
 
   setSubreddit(subreddit) {
-    console.log(`Set subreddit to ${subreddit}`)
     this.setState({ subreddit })
   }
 
