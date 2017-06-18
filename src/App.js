@@ -12,7 +12,7 @@ class App extends Component {
       <Router>
         <main>
           <Route exact path="/" component={Home}/>
-          <Route path="/r/:subreddit" component={Subreddit} />>
+          <Route path="/r/:subreddit" component={Subreddit} />
         </main>
       </Router>      
     )

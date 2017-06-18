@@ -6,23 +6,39 @@ body {
 
 /* WHITESPACE */
 .m0 { margin: 0; }
-.m1 { margin: 1em; }
-.m2 { margin: 2em; }
-.m3 { margin: 3em; }
+.m1 { margin: 0.5rem; }
+.m2 { margin: 1rem; }
+.m3 { margin: 2rem; }
 
 .mb0 { margin-bottom: 0; }
-.mb1 { margin-bottom: 1em; }
+.mb1 { margin-bottom: 0.5rem; }
 
-.p0 { margin: 0; }
-.p1 { margin: 1em; }
-.p2 { margin: 2em; }
-.p3 { margin: 3em; }
+.p0 { padding: 0; }
+.p1 { padding: 0.5rem; }
+.p2 { padding: 1rem; }
+.p3 { padding: 2rem; }
 
 /* TYPOGRAPHY */
 .muted { opacity: 0.3; }
 
+/* COLOR */
+.gray { color: #cccccc; }
+.border-gray { border-color: #cccccc; }
+.bg-gray { background-color: #cccccc; }
+.bg-darken-1 { background-color: rgba(0, 0, 0, 0.1); }
+.bg-darken-2 { background-color: rgba(0, 0, 0, 0.3); }
+
+
+/* BORDERS */
+.border-bottom { border-bottom-width: 1px; border-bottom-style: solid; }
+.border-right { border-right-width: 1px; border-right-style: solid; }
+
 /* FLEX */
 .flex { display: flex; }
+.flex-none { flex: none; }
+.flex-auto { flex: 1 1 auto; }
 
 /* HELPERS */
 .list-reset { list-style: none; }
+.icon { width: 24px; height: 24px; }
+.hover:hover { background-color: rgba(0, 0, 0, 0.1); transition: background-color 500ms; }
