@@ -4,6 +4,9 @@ import _get from 'lodash/get'
 export const Comment = ({ data, isChild }) => {
   const childComments = _get(data, 'replies.data.children')
   const className = `${isChild ? 'child' : 'parent'}-comment flex`
+  
+  if (!data.body) return null
+  
   return (
     <div className={className}>
       <div className="flex-auto">
