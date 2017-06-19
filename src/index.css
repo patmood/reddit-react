@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  color: #444;
 }
 
 /* WHITESPACE */
@@ -26,8 +27,10 @@ body {
 
 /* TYPOGRAPHY */
 .muted { opacity: 0.3; }
+.center { text-align: center; }
 
 /* COLOR */
+.blue { color: #428bca; }
 .gray { color: #cccccc; }
 .border-gray { border-color: #cccccc; }
 .bg-gray { background-color: #cccccc; }
@@ -43,6 +46,8 @@ body {
 .flex { display: flex; }
 .flex-none { flex: none; }
 .flex-auto { flex: 1 1 auto; }
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
 
 /* HELPERS */
 .list-reset { list-style: none; }

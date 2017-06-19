@@ -28,11 +28,12 @@ const PostItem = ({ post }) => (
         </Link>
       </div>
     </div>
-    <Link to={`/r/${post.data.subreddit}/comments/${post.data.id}`}>
-      <div>
-        <Comment className='icon gray' />
-        <div>{post.data.num_comments}</div>
-      </div>
+    <Link 
+      to={`/r/${post.data.subreddit}/comments/${post.data.id}`} 
+      className="center text-decoration-none color-inherit muted"
+    >
+      <Comment className="icon" />
+      <div>{post.data.num_comments}</div>
     </Link>
   </li>
 )

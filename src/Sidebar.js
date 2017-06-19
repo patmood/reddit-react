@@ -32,12 +32,16 @@ class Sidebar extends React.Component {
 
   render() {
     const posts = _get(this.state, 'reddit.data.children')
+    const title = this.props.subreddit ? this.props.subreddit : 'Front Page'
     return (
       <aside style={{ width: 300 }} className="flex-none border-right border-gray">
-        <div>
+        <div className="flex items-center p1">
           <Link to='/'>
             <Home className="icon gray" />
           </Link>
+          <div className="flex-auto center">
+            {title}
+          </div>
         </div>
         <ul className="list-reset p0 m0">
           {posts && posts.map(post => <PostItem key={post.data.id} post={post} />)}
