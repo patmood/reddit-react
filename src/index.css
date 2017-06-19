@@ -60,3 +60,6 @@ body {
 /* APP SPECIFIC */
 .parent-comment { border-bottom: 1px solid rgba(0,0,0,.05) }
 .child-comment { border-left: 14px solid rgba(0,0,0,.05); margin-left: 1px; }
+
+.collapse-icon { transform: rotate(0deg); transition: transform 500ms; }
+.collapse-icon--collapsed { transform: rotate(90deg); transition: transform 500ms; }
