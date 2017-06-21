@@ -1,6 +1,8 @@
 import React from 'react'
 import _get from 'lodash/get'
 
+import IconCaret from './icons/IconCaret'
+
 class Comment extends React.Component {
   constructor(props) {
     super(props)
@@ -25,9 +27,9 @@ class Comment extends React.Component {
     return (
       <div className={className}>
         <div className="flex-auto">
-          <header className="flex pointer muted p1" onClick={this.toggleCollapse}>
-            <div className="mr1">
-              <div className={ collapsed ? "collapse-icon" : "collapse-icon--collapsed"}>></div>
+          <header className="flex items-center pointer muted p1" onClick={this.toggleCollapse}>
+            <div className={ collapsed ? "collapse-icon mr1" : "collapse-icon--collapsed mr1"}>
+              <IconCaret className="icon" style={{ width: 15 }} />
             </div>
             <div>{data.author}</div>
           </header>
